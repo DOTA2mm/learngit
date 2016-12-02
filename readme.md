@@ -20,3 +20,12 @@
     $ git add readme.txt 
     $ git commit -m "branch test"
     ```
+- 现在，dev分支的工作完成，我们就可以切换回master分支：
+
+    ```
+    $ git checkout master
+    ```
+- 切换到`master`分支后，合并`dev`分支到`master`分支
+    ```
+    $ git merge dev
+    ```
