@@ -67,3 +67,13 @@
     1 file changed, 1 insertion(+)
     ```
     > 因为本次合并要创建一个新的commit，所以加上-m参数，把commit描述写进去。
+- 合并后，我们用git log看看分支历史：
+    ```
+    $ git log --graph --pretty=oneline --abbrev-commit
+    *   7825a50 merge with no-ff
+    |\
+    | * 6224937 add merge
+    |/
+    *   59bc1cb conflict fixed
+    ...
+    ```
