@@ -15,3 +15,8 @@
     $ git branch dev
     $ git checkout dev
     ```
+- 在dev branch上提交
+    ```git
+    $ git add readme.txt 
+    $ git commit -m "branch test"
+    ```
