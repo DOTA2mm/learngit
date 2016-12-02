@@ -1,5 +1,7 @@
-## This file for learn git tool
+## Note for learn git tool
+
 > 2016/12/2
+> Chuck
 
 ### 远程仓库
 - 创建SSH key `$ ssh-keygen -t rsa -C "youremail@example.com"`
@@ -38,3 +40,30 @@
 ### 解决冲突
 - 合并不同分支可能会产生冲突，比如修改了同一行内容
     - Creating a new branch is quick & simple.
+
+### 分支策略
+- 首先，仍然创建并切换dev分支：
+    ```
+    $ git checkout -b dev
+    Switched to a new branch 'dev'
+    ```
+- 修改readme.txt文件，并提交一个新的commit：
+    ```
+    $ git add readme.txt 
+    $ git commit -m "add merge"
+    [dev 6224937] add merge
+    1 file changed, 1 insertion(+)
+    ```
+- 现在，我们切换回master：
+    ```
+    $ git checkout master
+    Switched to branch 'master'
+    ```
+- 准备合并dev分支，请注意--no-ff参数，表示禁用Fast forward：
+    ```
+    $ git merge --no-ff -m "merge with no-ff" dev
+    Merge made by the 'recursive' strategy.
+    readme.txt |    1 +
+    1 file changed, 1 insertion(+)
+    ```
+    > 因为本次合并要创建一个新的commit，所以加上-m参数，把commit描述写进去。
