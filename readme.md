@@ -39,7 +39,6 @@
 
 ### 解决冲突
 - 合并不同分支可能会产生冲突，比如修改了同一行内容
-    - Creating a new branch is quick & simple.
 
 ### 分支策略
 - 首先，仍然创建并切换dev分支：
