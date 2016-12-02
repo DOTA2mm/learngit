@@ -30,3 +30,7 @@
     ```
     $ git merge dev
     ```
+- 合并完成后，就可以放心地删除dev分支了：
+    ```
+    $ git branch -d dev
+    ```
