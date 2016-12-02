@@ -76,3 +76,12 @@
     *   59bc1cb conflict fixed
     ...
     ```
+
+### BUG分支
+- Git还提供了一个stash功能，可以把当前工作现场“储藏”起来，等以后恢复现场后继续工作：
+    ```
+    $ git stash
+    Saved working directory and index state WIP on dev: 6224937 add merge
+    HEAD is now at 6224937 add merge
+    ```
+- stash之后，可以checkout到其他分支处理bug，处理完bug切到当前分支，`git stash pop`回到工作现场
