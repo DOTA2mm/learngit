@@ -67,3 +67,22 @@
     1 file changed, 1 insertion(+)
     ```
     > 因为本次合并要创建一个新的commit，所以加上-m参数，把commit描述写进去。
+- 合并后，我们用git log看看分支历史：
+    ```
+    $ git log --graph --pretty=oneline --abbrev-commit
+    *   7825a50 merge with no-ff
+    |\
+    | * 6224937 add merge
+    |/
+    *   59bc1cb conflict fixed
+    ...
+    ```
+
+### BUG分支
+- Git还提供了一个stash功能，可以把当前工作现场“储藏”起来，等以后恢复现场后继续工作：
+    ```
+    $ git stash
+    Saved working directory and index state WIP on dev: 6224937 add merge
+    HEAD is now at 6224937 add merge
+    ```
+- stash之后，可以checkout到其他分支处理bug，处理完bug切到当前分支，`git stash pop`回到工作现场
