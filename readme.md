@@ -37,4 +37,4 @@
 
 ### 解决冲突
 - 合并不同分支可能会产生冲突，比如修改了同一行内容
-    - Creating a new branch is quick AND simple.
+    - Creating a new branch is quick & simple.
